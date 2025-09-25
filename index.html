@@ -8,282 +8,284 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root {
-      --color-accent: #FF8A8A;
-      --color-services: #FF5C5C;
-      --color-white: #fff;
-      --color-dark: #222;
+      --color-bg: #fff;
+      --color-bg-alt: #f6f6f6;
+      --color-primary: #191919;
+      --color-secondary: #222;
+      --color-border: #e5e5e5;
+      --color-accent: #222;
+      --color-card: #fff;
     }
-    .bg-accent { background-color: var(--color-accent); }
-    .bg-services { background-color: var(--color-services); }
-    .text-accent { color: var(--color-accent); }
-    .text-services { color: var(--color-services); }
-    .border-accent { border-color: var(--color-accent); }
-    .border-services { border-color: var(--color-services); }
+    .bg-main { background-color: var(--color-bg); }
+    .bg-alt { background-color: var(--color-bg-alt); }
+    .text-main { color: var(--color-primary); }
+    .text-alt { color: var(--color-secondary); }
+    .border-main { border-color: var(--color-border); }
+    .bg-card { background-color: var(--color-card); }
+    .accent { color: var(--color-accent); }
   </style>
 </head>
-<body class="min-h-screen bg-accent text-zinc-900">
+<body class="min-h-screen bg-main text-main">
   <!-- Header -->
-  <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-accent/90 border-b border-accent">
+  <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/80 border-b border-main bg-main">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <div class="flex items-center gap-2">
         <!-- Logo image (replace logo.png with your actual image name) -->
-        <img src="logo.png" alt="AstartQA logo" class="w-10 h-10 rounded-xl object-contain bg-white" />
+        <img src="logo.png" alt="AstartQA logo" class="w-8 h-8 rounded-xl object-contain bg-white border border-main" />
         <span class="font-semibold text-lg">AstartQA</span>
       </div>
       <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#services" class="hover:text-services transition">Services</a>
-        <a href="#packages" class="hover:text-services transition">Packages</a>
-        <a href="#process" class="hover:text-services transition">Process</a>
-        <a href="#contact" class="hover:text-services transition">Contact</a>
+        <a href="#services" class="hover:text-alt transition">Services</a>
+        <a href="#packages" class="hover:text-alt transition">Packages</a>
+        <a href="#process" class="hover:text-alt transition">Process</a>
+        <a href="#contact" class="hover:text-alt transition">Contact</a>
       </nav>
-      <a href="#contact" class="hidden sm:inline-flex items-center gap-2 bg-services text-white rounded-xl px-4 py-2 text-sm">Book a Call</a>
+      <a href="#contact" class="hidden sm:inline-flex items-center gap-2 bg-main text-alt border border-main rounded-xl px-4 py-2 text-sm hover:bg-alt transition">Book a Call</a>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-10 bg-accent">
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-10 bg-main">
     <div class="grid lg:grid-cols-2 gap-10 items-center">
       <div>
-        <h1 class="text-4xl md:text-5xl font-semibold leading-tight tracking-tight text-services">Quality that speeds up releases</h1>
-        <p class="mt-4 text-zinc-600 text-lg">AstartQA helps startups and product teams catch critical bugs before demos and investor meetings, build lean QA processes, and launch automation — fast, transparent, no bureaucracy.</p>
+        <h1 class="text-4xl md:text-5xl font-semibold leading-tight tracking-tight accent">Quality that speeds up releases</h1>
+        <p class="mt-4 text-alt text-lg">AstartQA helps startups and product teams catch critical bugs before demos and investor meetings, build lean QA processes, and launch automation — fast, transparent, no bureaucracy.</p>
         <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#packages" class="inline-flex items-center gap-2 bg-services text-white rounded-xl px-4 py-2">See Packages</a>
-          <a href="#contact" class="inline-flex items-center gap-2 border border-services rounded-xl px-4 py-2 text-services">15‑min Intro</a>
+          <a href="#packages" class="inline-flex items-center gap-2 bg-main text-alt border border-main rounded-xl px-4 py-2 hover:bg-alt transition">See Packages</a>
+          <a href="#contact" class="inline-flex items-center gap-2 border border-main rounded-xl px-4 py-2 text-main hover:bg-alt transition">15‑min Intro</a>
         </div>
-        <ul class="mt-6 flex flex-wrap items-center gap-4 text-sm text-zinc-600">
+        <ul class="mt-6 flex flex-wrap items-center gap-4 text-sm text-alt">
           <li>✔ 48‑hour mini audit</li>
           <li>✔ Stakeholder‑ready reports</li>
           <li>✔ Risk map & priorities</li>
         </ul>
       </div>
       <div class="lg:pl-8">
-        <div class="shadow-xl border border-accent rounded-2xl p-6 bg-white">
-          <h3 class="text-xl font-semibold text-services">What we do</h3>
-          <p class="text-sm text-zinc-600 mt-1">Results in days, not months</p>
+        <div class="shadow-xl border border-main rounded-2xl p-6 bg-card">
+          <h3 class="text-xl font-semibold accent">What we do</h3>
+          <p class="text-sm text-alt mt-1">Results in days, not months</p>
           <div class="grid sm:grid-cols-2 gap-4 mt-4 text-sm">
             <div>
-              <div class="font-medium text-services">48‑hour QA Audits</div>
-              <div class="text-zinc-600">10 critical issues, 3 quick wins, 10‑min walkthrough video.</div>
+              <div class="font-medium accent">48‑hour QA Audits</div>
+              <div class="text-alt">10 critical issues, 3 quick wins, 10‑min walkthrough video.</div>
             </div>
             <div>
-              <div class="font-medium text-services">Automation Starter</div>
-              <div class="text-zinc-600">Postman + env + CSV; CI setup (GitHub/GitLab).</div>
+              <div class="font-medium accent">Automation Starter</div>
+              <div class="text-alt">Postman + env + CSV; CI setup (GitHub/GitLab).</div>
             </div>
             <div>
-              <div class="font-medium text-services">Perf & A11y Scan</div>
-              <div class="text-zinc-600">LCP/CLS/TTI and WCAG recommendations.</div>
+              <div class="font-medium accent">Perf & A11y Scan</div>
+              <div class="text-alt">LCP/CLS/TTI and WCAG recommendations.</div>
             </div>
             <div>
-              <div class="font-medium text-services">Jira/TestRail</div>
-              <div class="text-zinc-600">Workflows, templates, dashboards, reporting.</div>
+              <div class="font-medium accent">Jira/TestRail</div>
+              <div class="text-alt">Workflows, templates, dashboards, reporting.</div>
             </div>
             <div>
-              <div class="font-medium text-services">Mobile QA</div>
-              <div class="text-zinc-600">iOS/Android quick‑pass: 25 key scenarios, screen‑captures.</div>
+              <div class="font-medium accent">Mobile QA</div>
+              <div class="text-alt">iOS/Android quick‑pass: 25 key scenarios, screen‑captures.</div>
             </div>
             <div>
-              <div class="font-medium text-services">Web3/DeFi QA</div>
-              <div class="text-zinc-600">DEX/liquidity/bridges, slippage/decimals, UX safety.</div>
+              <div class="font-medium accent">Web3/DeFi QA</div>
+              <div class="text-alt">DEX/liquidity/bridges, slippage/decimals, UX safety.</div>
             </div>
           </div>
-          <a href="#services" class="inline-flex items-center gap-2 text-services mt-4">Learn more →</a>
+          <a href="#services" class="inline-flex items-center gap-2 accent mt-4">Learn more →</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Services -->
-  <section id="services" class="bg-services border-y border-services">
+  <section id="services" class="bg-alt border-y border-main">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
-      <h2 class="text-2xl md:text-3xl font-semibold text-white">Services</h2>
-      <p class="mt-2 text-white max-w-2xl">Mix and match any package. Clear scope and timelines, weekly progress demos.</p>
+      <h2 class="text-2xl md:text-3xl font-semibold accent">Services</h2>
+      <p class="mt-2 text-alt max-w-2xl">Mix and match any package. Clear scope and timelines, weekly progress demos.</p>
       <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
-        <!-- Each service box -->
-        <div class="p-6 rounded-2xl border border-white hover:shadow-lg transition bg-accent text-services">
+        <div class="p-6 rounded-2xl border border-main hover:shadow-lg transition bg-card accent">
           <div class="font-medium">48‑hour QA Audits</div>
-          <div class="text-zinc-900 mt-1">10 critical issues, 3 quick wins, 10‑min walkthrough video.</div>
+          <div class="text-alt mt-1">10 critical issues, 3 quick wins, 10‑min walkthrough video.</div>
         </div>
-        <div class="p-6 rounded-2xl border border-white hover:shadow-lg transition bg-accent text-services">
+        <div class="p-6 rounded-2xl border border-main hover:shadow-lg transition bg-card accent">
           <div class="font-medium">Automation Starter</div>
-          <div class="text-zinc-900 mt-1">Postman collections, env, CSV; CI integration.</div>
+          <div class="text-alt mt-1">Postman collections, env, CSV; CI integration.</div>
         </div>
-        <div class="p-6 rounded-2xl border border-white hover:shadow-lg transition bg-accent text-services">
+        <div class="p-6 rounded-2xl border border-main hover:shadow-lg transition bg-card accent">
           <div class="font-medium">Perf & A11y Scan</div>
-          <div class="text-zinc-900 mt-1">Lighthouse + manual WCAG checks, improvement plan.</div>
+          <div class="text-alt mt-1">Lighthouse + manual WCAG checks, improvement plan.</div>
         </div>
-        <div class="p-6 rounded-2xl border border-white hover:shadow-lg transition bg-accent text-services">
+        <div class="p-6 rounded-2xl border border-main hover:shadow-lg transition bg-card accent">
           <div class="font-medium">Jira/TestRail Setup</div>
-          <div class="text-zinc-900 mt-1">Workflows, bug/case templates, dashboards, reporting.</div>
+          <div class="text-alt mt-1">Workflows, bug/case templates, dashboards, reporting.</div>
         </div>
-        <div class="p-6 rounded-2xl border border-white hover:shadow-lg transition bg-accent text-services">
+        <div class="p-6 rounded-2xl border border-main hover:shadow-lg transition bg-card accent">
           <div class="font-medium">Mobile QA</div>
-          <div class="text-zinc-900 mt-1">iOS/Android quick‑pass: 25 scenarios, screen‑captures, bug list.</div>
+          <div class="text-alt mt-1">iOS/Android quick‑pass: 25 scenarios, screen‑captures, bug list.</div>
         </div>
-        <div class="p-6 rounded-2xl border border-white hover:shadow-lg transition bg-accent text-services">
+        <div class="p-6 rounded-2xl border border-main hover:shadow-lg transition bg-card accent">
           <div class="font-medium">Web3/DeFi QA</div>
-          <div class="text-zinc-900 mt-1">Swap/liquidity/bridges audits, edge cases (slippage/decimals).</div>
+          <div class="text-alt mt-1">Swap/liquidity/bridges audits, edge cases (slippage/decimals).</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Packages -->
-  <section id="packages" class="bg-accent">
+  <section id="packages" class="bg-main">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
-      <h2 class="text-2xl md:text-3xl font-semibold text-services">Packages & Pricing</h2>
-      <p class="mt-2 text-zinc-600 max-w-2xl">Clear outcomes. No endless deadlines. Money‑back on express packages if not useful.</p>
+      <h2 class="text-2xl md:text-3xl font-semibold accent">Packages & Pricing</h2>
+      <p class="mt-2 text-alt max-w-2xl">Clear outcomes. No endless deadlines. Money‑back on express packages if not useful.</p>
       <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
-        <!-- Each package box -->
-        <div class="p-6 rounded-2xl border border-services flex flex-col bg-white">
+        <div class="p-6 rounded-2xl border border-main flex flex-col bg-card">
           <div class="flex items-center justify-between">
-            <div class="text-lg font-semibold text-services">Express Consultation</div>
-            <span class="text-xs rounded-full bg-services text-white px-2 py-0.5">30 min</span>
+            <div class="text-lg font-semibold accent">Express Consultation</div>
+            <span class="text-xs rounded-full bg-main border border-main text-alt px-2 py-0.5">30 min</span>
           </div>
-          <div class="text-3xl font-semibold text-services mt-1">$49</div>
-          <ul class="mt-3 space-y-1 text-zinc-700">
+          <div class="text-3xl font-semibold accent mt-1">$49</div>
+          <ul class="mt-3 space-y-1 text-alt">
             <li>✔ Quick diagnosis</li>
             <li>✔ Next‑step plan</li>
             <li>✔ Follow‑up notes</li>
           </ul>
-          <a href="#contact" class="mt-4 inline-flex justify-center items-center rounded-xl bg-services text-white px-4 py-2 w-full">Book</a>
+          <a href="#contact" class="mt-4 inline-flex justify-center items-center rounded-xl bg-main border border-main text-alt px-4 py-2 w-full hover:bg-alt transition">Book</a>
         </div>
-        <div class="p-6 rounded-2xl border border-services flex flex-col bg-white">
+        <div class="p-6 rounded-2xl border border-main flex flex-col bg-card">
           <div class="flex items-center justify-between">
-            <div class="text-lg font-semibold text-services">60‑min Consultation</div>
-            <span class="text-xs rounded-full bg-services text-white px-2 py-0.5">deep dive</span>
+            <div class="text-lg font-semibold accent">60‑min Consultation</div>
+            <span class="text-xs rounded-full bg-main border border-main text-alt px-2 py-0.5">deep dive</span>
           </div>
-          <div class="text-3xl font-semibold text-services mt-1">$99</div>
-          <ul class="mt-3 space-y-1 text-zinc-700">
+          <div class="text-3xl font-semibold accent mt-1">$99</div>
+          <ul class="mt-3 space-y-1 text-alt">
             <li>✔ 2–4 week roadmap</li>
             <li>✔ Risks & priorities</li>
             <li>✔ Links & templates</li>
           </ul>
-          <a href="#contact" class="mt-4 inline-flex justify-center items-center rounded-xl bg-services text-white px-4 py-2 w-full">Schedule</a>
+          <a href="#contact" class="mt-4 inline-flex justify-center items-center rounded-xl bg-main border border-main text-alt px-4 py-2 w-full hover:bg-alt transition">Schedule</a>
         </div>
-        <div class="p-6 rounded-2xl border border-services flex flex-col bg-white">
+        <div class="p-6 rounded-2xl border border-main flex flex-col bg-card">
           <div class="flex items-center justify-between">
-            <div class="text-lg font-semibold text-services">48‑hour Mini Audit</div>
-            <span class="text-xs rounded-full bg-services text-white px-2 py-0.5">best‑seller</span>
+            <div class="text-lg font-semibold accent">48‑hour Mini Audit</div>
+            <span class="text-xs rounded-full bg-main border border-main text-alt px-2 py-0.5">best‑seller</span>
           </div>
-          <div class="text-3xl font-semibold text-services mt-1">$249</div>
-          <ul class="mt-3 space-y-1 text-zinc-700">
+          <div class="text-3xl font-semibold accent mt-1">$249</div>
+          <ul class="mt-3 space-y-1 text-alt">
             <li>✔ 10 critical issues</li>
             <li>✔ 3 quick wins</li>
             <li>✔ 10‑min walkthrough video</li>
             <li>✔ Regression checklist</li>
           </ul>
-          <a href="#contact" class="mt-4 inline-flex justify-center items-center rounded-xl bg-services text-white px-4 py-2 w-full">Order</a>
+          <a href="#contact" class="mt-4 inline-flex justify-center items-center rounded-xl bg-main border border-main text-alt px-4 py-2 w-full hover:bg-alt transition">Order</a>
         </div>
-        <div class="p-6 rounded-2xl border border-services flex flex-col bg-white">
+        <div class="p-6 rounded-2xl border border-main flex flex-col bg-card">
           <div class="flex items-center justify-between">
-            <div class="text-lg font-semibold text-services">7‑day Full Audit</div>
-            <span class="text-xs rounded-full bg-services text-white px-2 py-0.5">project</span>
+            <div class="text-lg font-semibold accent">7‑day Full Audit</div>
+            <span class="text-xs rounded-full bg-main border border-main text-alt px-2 py-0.5">project</span>
           </div>
-          <div class="text-3xl font-semibold text-services mt-1">$749–$1200</div>
-          <ul class="mt-3 space-y-1 text-zinc-700">
+          <div class="text-3xl font-semibold accent mt-1">$749–$1200</div>
+          <ul class="mt-3 space-y-1 text-alt">
             <li>✔ Test plan + risk map</li>
             <li>✔ 20–30 tests</li>
             <li>✔ Stakeholder reports</li>
           </ul>
-          <a href="#contact" class="mt-4 inline-flex justify-center items-center rounded-xl bg-services text-white px-4 py-2 w-full">Discuss</a>
+          <a href="#contact" class="mt-4 inline-flex justify-center items-center rounded-xl bg-main border border-main text-alt px-4 py-2 w-full hover:bg-alt transition">Discuss</a>
         </div>
-        <div class="p-6 rounded-2xl border border-services flex flex-col bg-white">
+        <div class="p-6 rounded-2xl border border-main flex flex-col bg-card">
           <div class="flex items-center justify-between">
-            <div class="text-lg font-semibold text-services">Postman + CI Starter</div>
-            <span class="text-xs rounded-full bg-services text-white px-2 py-0.5">automation</span>
+            <div class="text-lg font-semibold accent">Postman + CI Starter</div>
+            <span class="text-xs rounded-full bg-main border border-main text-alt px-2 py-0.5">automation</span>
           </div>
-          <div class="text-3xl font-semibold text-services mt-1">$399</div>
-          <ul class="mt-3 space-y-1 text-zinc-700">
+          <div class="text-3xl font-semibold accent mt-1">$399</div>
+          <ul class="mt-3 space-y-1 text-alt">
             <li>✔ Collection + Env + CSV</li>
             <li>✔ README + Loom</li>
             <li>✔ GitHub/GitLab Actions</li>
           </ul>
-          <a href="#contact" class="mt-4 inline-flex justify-center items-center rounded-xl bg-services text-white px-4 py-2 w-full">Start</a>
+          <a href="#contact" class="mt-4 inline-flex justify-center items-center rounded-xl bg-main border border-main text-alt px-4 py-2 w-full hover:bg-alt transition">Start</a>
         </div>
-        <div class="p-6 rounded-2xl border border-services flex flex-col bg-white">
+        <div class="p-6 rounded-2xl border border-main flex flex-col bg-card">
           <div class="flex items-center justify-between">
-            <div class="text-lg font-semibold text-services">Jira in a Week</div>
-            <span class="text-xs rounded-full bg-services text-white px-2 py-0.5">system</span>
+            <div class="text-lg font-semibold accent">Jira in a Week</div>
+            <span class="text-xs rounded-full bg-main border border-main text-alt px-2 py-0.5">system</span>
           </div>
-          <div class="text-3xl font-semibold text-services mt-1">$499</div>
-          <ul class="mt-3 space-y-1 text-zinc-700">
+          <div class="text-3xl font-semibold accent mt-1">$499</div>
+          <ul class="mt-3 space-y-1 text-alt">
             <li>✔ Workflows/statuses</li>
             <li>✔ Bug/case templates</li>
             <li>✔ Dashboard + reports</li>
           </ul>
-          <a href="#contact" class="mt-4 inline-flex justify-center items-center rounded-xl bg-services text-white px-4 py-2 w-full">Launch</a>
+          <a href="#contact" class="mt-4 inline-flex justify-center items-center rounded-xl bg-main border border-main text-alt px-4 py-2 w-full hover:bg-alt transition">Launch</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Process -->
-  <section id="process" class="bg-accent border-y border-accent">
+  <section id="process" class="bg-alt border-y border-main">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
-      <h2 class="text-2xl md:text-3xl font-semibold text-services">How we work</h2>
+      <h2 class="text-2xl md:text-3xl font-semibold accent">How we work</h2>
       <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
-        <div class="p-6 rounded-2xl border border-services bg-white">
-          <div class="text-xs text-services">Step 01</div>
-          <div class="text-lg font-semibold text-services mt-1">Intro call (15–20 min)</div>
-          <p class="text-zinc-700 mt-2">We capture goals, risks, and deadlines. Agree on scope and success criteria.</p>
+        <div class="p-6 rounded-2xl border border-main bg-card">
+          <div class="text-xs text-alt">Step 01</div>
+          <div class="text-lg font-semibold accent mt-1">Intro call (15–20 min)</div>
+          <p class="text-alt mt-2">We capture goals, risks, and deadlines. Agree on scope and success criteria.</p>
         </div>
-        <div class="p-6 rounded-2xl border border-services bg-white">
-          <div class="text-xs text-services">Step 02</div>
-          <div class="text-lg font-semibold text-services mt-1">Access & artifacts</div>
-          <p class="text-zinc-700 mt-2">Sandboxes, API/Swagger, features list, current bugs, metrics.</p>
+        <div class="p-6 rounded-2xl border border-main bg-card">
+          <div class="text-xs text-alt">Step 02</div>
+          <div class="text-lg font-semibold accent mt-1">Access & artifacts</div>
+          <p class="text-alt mt-2">Sandboxes, API/Swagger, features list, current bugs, metrics.</p>
         </div>
-        <div class="p-6 rounded-2xl border border-services bg-white">
-          <div class="text-xs text-services">Step 03</div>
-          <div class="text-lg font-semibold text-services mt-1">Working sprint</div>
-          <p class="text-zinc-700 mt-2">Checklist‑driven work, quick demos, decisions with stakeholders.</p>
+        <div class="p-6 rounded-2xl border border-main bg-card">
+          <div class="text-xs text-alt">Step 03</div>
+          <div class="text-lg font-semibold accent mt-1">Working sprint</div>
+          <p class="text-alt mt-2">Checklist‑driven work, quick demos, decisions with stakeholders.</p>
         </div>
-        <div class="p-6 rounded-2xl border border-services bg-white">
-          <div class="text-xs text-services">Step 04</div>
-          <div class="text-lg font-semibold text-services mt-1">Results</div>
-          <p class="text-zinc-700 mt-2">Reports, prioritization, a 2–4 week plan. Optional ongoing support.</p>
+        <div class="p-6 rounded-2xl border border-main bg-card">
+          <div class="text-xs text-alt">Step 04</div>
+          <div class="text-lg font-semibold accent mt-1">Results</div>
+          <p class="text-alt mt-2">Reports, prioritization, a 2–4 week plan. Optional ongoing support.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="bg-accent">
+  <section id="contact" class="bg-main">
     <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-14">
-      <h2 class="text-2xl md:text-3xl font-semibold text-center text-services">Contact AstartQA</h2>
-      <p class="mt-2 text-zinc-600 text-center">Tell us about your product and deadline — we'll send 2–3 engagement options and pricing within 24 hours.</p>
-      <form action="https://formsubmit.co/darla.kuznejek@gmail.com" method="POST" class="mt-8 grid gap-4 p-6 rounded-2xl border border-services bg-white">
+      <h2 class="text-2xl md:text-3xl font-semibold text-center accent">Contact AstartQA</h2>
+      <p class="mt-2 text-alt text-center">Tell us about your product and deadline — we'll send 2–3 engagement options and pricing within 24 hours.</p>
+      <form action="https://formsubmit.co/darla.kuznejek@gmail.com" method="POST" class="mt-8 grid gap-4 p-6 rounded-2xl border border-main bg-card">
         <div class="grid md:grid-cols-2 gap-4">
-          <input name="name" class="border border-services rounded-xl px-3 py-2" placeholder="Your name" required />
-          <input name="email" class="border border-services rounded-xl px-3 py-2" placeholder="Email" type="email" required />
+          <input name="name" class="border border-main rounded-xl px-3 py-2" placeholder="Your name" required />
+          <input name="email" class="border border-main rounded-xl px-3 py-2" placeholder="Email" type="email" required />
         </div>
-        <input name="product" class="border border-services rounded-xl px-3 py-2" placeholder="Product or repo link (optional)" />
-        <textarea name="message" class="border border-services rounded-xl px-3 py-2" placeholder="Briefly: goals / scope / timelines" rows="5" required></textarea>
+        <input name="product" class="border border-main rounded-xl px-3 py-2" placeholder="Product or repo link (optional)" />
+        <textarea name="message" class="border border-main rounded-xl px-3 py-2" placeholder="Briefly: goals / scope / timelines" rows="5" required></textarea>
         <div class="flex flex-wrap items-center gap-3">
-          <button type="submit" class="bg-services text-white rounded-xl px-4 py-2">Send request</button>
-          <a href="#" class="border border-services rounded-xl px-4 py-2 text-services">Book a slot</a>
+          <button type="submit" class="bg-main text-alt border border-main rounded-xl px-4 py-2 hover:bg-alt transition">Send request</button>
+          <a href="#" class="border border-main rounded-xl px-4 py-2 text-main hover:bg-alt transition">Book a slot</a>
         </div>
       </form>
-      <div class="mt-6 flex items-center justify-center gap-4 text-sm text-zinc-600">
-        <a href="mailto:hello@astartqa.com" class="hover:text-services">hello@astartqa.com</a>
-        <a href="#" class="hover:text-services">GitHub</a>
-        <a href="#" class="hover:text-services">LinkedIn</a>
-        <a href="#" class="hover:text-services">X / Twitter</a>
+      <div class="mt-6 flex items-center justify-center gap-4 text-sm text-alt">
+        <a href="mailto:hello@astartqa.com" class="hover:text-main">hello@astartqa.com</a>
+        <a href="#" class="hover:text-main">GitHub</a>
+        <a href="#" class="hover:text-main">LinkedIn</a>
+        <a href="#" class="hover:text-main">X / Twitter</a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="border-t border-accent bg-accent">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between text-sm text-zinc-600">
+  <footer class="border-t border-main bg-main">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between text-sm text-alt">
       <div class="flex items-center gap-2">
-        <img src="logo.png" alt="AstartQA logo" class="w-7 h-7 rounded-xl object-contain bg-white" />
+        <img src="logo.png" alt="AstartQA logo" class="w-7 h-7 rounded-xl object-contain bg-white border border-main" />
         <span>AstartQA © 2025</span>
       </div>
       <div class="flex items-center gap-4">
-        <a href="#services" class="hover:text-services">Services</a>
-        <a href="#packages" class="hover:text-services">Packages</a>
-        <a href="#process" class="hover:text-services">Process</a>
-        <a href="#contact" class="hover:text-services">Contact</a>
+        <a href="#services" class="hover:text-main">Services</a>
+        <a href="#packages" class="hover:text-main">Packages</a>
+        <a href="#process" class="hover:text-main">Process</a>
+        <a href="#contact" class="hover:text-main">Contact</a>
       </div>
     </div>
   </footer>
